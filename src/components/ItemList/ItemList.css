@@ -1,5 +1,22 @@
 .shopping-items-wrapper{
     min-width: 100%;
     max-width: 500px;
-    
+
+}
+.items-list{
+    display: flex;
+    align-items:center;
+    margin-bottom: 1.5rem;
+}
+.change-quantity{
+    padding: 0.5rem;
+    border-radius: 100%;
+}
+.add-item{
+    background-color: var(--light-blue);
+    color: white;
+}
+.remove-item{
+    background-color: lightgrey;
+    color: white;
 }
