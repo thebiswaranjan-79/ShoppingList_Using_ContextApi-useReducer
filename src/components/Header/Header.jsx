@@ -1,5 +1,8 @@
-import React from 'react';
+// CSS Imports
 import './Header.css';
+
+// Component Imort 
+import React from 'react';
 import HeaderImage from '../../assets/header_img.avif'
 const Header = () => {
     return (
