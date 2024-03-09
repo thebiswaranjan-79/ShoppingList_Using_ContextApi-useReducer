@@ -2,6 +2,10 @@
 import './ShoppingList.css'
 import 'react-toastify/dist/ReactToastify.css';
 
+// Context Import 
+import { ShoppingItemsContext, ShoppingDispatchContext } from '../../providers/ShoppingContext';
+
+
 import React, {  useReducer } from 'react';
 import Header from '../Header/Header';
 import InputItem from '../InputItem/InputItem';
@@ -41,18 +45,21 @@ const ShoppingList = () => {
 
     return (
         <div>
-            <Header/>
-            <ToastContainer/>
-            <div className='current-shopping-list'>
-                <InputItem
-                    addItem = {handleAddItem}
-                />
-                <ItemList
-                    shoppingItems={shoppingItems}
-                    addQuantity = {handleAddQuantity}
-                    decQuantity = {handleDecQuantity}
-                />
-            </div>
+            <ShoppingItemsContext.Provider value={shoppingItems}>
+                <ShoppingDispatchContext.Provider value={dispatch}>
+                    <Header/>
+                    <ToastContainer/>
+                    <div className='current-shopping-list'>
+                        <InputItem
+                            addItem = {handleAddItem}
+                        />
+                        <ItemList
+                            addQuantity = {handleAddQuantity}
+                            decQuantity = {handleDecQuantity}
+                        />
+                    </div>
+                </ShoppingDispatchContext.Provider>
+            </ShoppingItemsContext.Provider>
         </div>
     );
 }
