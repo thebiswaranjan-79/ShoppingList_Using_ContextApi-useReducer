@@ -1,6 +1,8 @@
 // CSS Imports
 import './Item.css'
 
+import React from 'react';
+
 const Item = ({itemName, quantity}) => {
     return (
         <div className='item-wrapper'>
@@ -14,4 +16,4 @@ const Item = ({itemName, quantity}) => {
     );
 }
 
-export default Item;
+export default React.memo(Item);

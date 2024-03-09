@@ -12,6 +12,9 @@
     padding: 0.5rem;
     border-radius: 100%;
 }
+.change-quantity:hover{
+    color: black;
+}
 .add-item{
     background-color: var(--light-blue);
     color: white;
