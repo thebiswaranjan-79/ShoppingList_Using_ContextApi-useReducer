@@ -21,21 +21,21 @@ const ShoppingList = () => {
     function handleAddItem(name){
         dispatch({
             type : 'add_item',
-            itemName : name
+            itemName : name,
         });
     }
 
     function handleAddQuantity(id){
         dispatch({
             type : 'increament_item',
-            itemId : id
+            itemId : id,
         });
     }
 
     function handleDecQuantity(itemId){
         dispatch({
             type : 'decreament_item',
-            itemId : id
+            itemId : id,
         });
     }
 
